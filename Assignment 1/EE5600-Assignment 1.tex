@@ -1,0 +1,88 @@
+%\documentclass[a4paper,12pt]{article}
+\documentclass[twocolumn]{article}
+\setlength\columnsep{25pt}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\begin{document}
+
+
+\title{EE5600 Assignment 1}
+\author{Ealleti Sai Vikram [EE20MTECH11006]}
+\date{\today}
+\maketitle
+
+\textbf{\emph{Abstract} - This document contains the \\solution to Lines and planes problem}
+
+
+% comment declaration
+
+%section declaration
+\section*{Problem:}
+Find the equation of the plane passing through
+the line of intersection of the planes
+\\   
+\hspace*{2cm}  
+$\begin{pmatrix}1&1&1\end{pmatrix}$$\cdot$X = 1  and
+\\
+\hspace*{2cm}
+$\begin{pmatrix}2&3&-1\end{pmatrix}$$\cdot$X = 4
+\\
+and parallel to X-axis.
+%another section
+\section*{Solution:}
+For the above problem we try to find equation
+\\ of plane ax + by + cz = d using point-normal approach.
+The process is as follows :
+\\
+\\\textbf{Step 1}: Finding the normal vector of plane for finding coefficients of plane equation (a,b,c).
+\\
+\\ For this we utilize the concept of cross product of normal vectors of two planes.
+\\\hspace*{0.5cm} Normal vector of plane 1:$\vec{N_{p1}}$= $\hat{i}$  + $\hat{j}$  + $\hat{k}$
+\\\hspace*{0.5cm} Normal vector of plane 2:$\vec{N_{p2}}$= 2$\hat{i}$ + 3$\hat{j}$ - $\hat{k}$
+\\Now cross-product of $\vec{N_{p1}}$ and $\vec{N_{p2}}$ yields
+\\\hspace*{1.5cm}$\vec{N_{p1}}$$\times$$\vec{N_{p2}}$ = -4$\hat{i}$ + 3$\hat{j}$ + 1$\hat{k}$
+\\Call the resultant vector  $\vec{P_{p3}}$
+\\\hspace*{1.5cm}$\vec{P_{p3}}$ = -4$\hat{i}$ + 3$\hat{j}$ + 1$\hat{k}$
+\\This Vector is perpendicular to $\vec{N_{p1}}$ and $\vec{N_{p2}}$ ,hence it gives the direction of intersecting line  which is present in required plane. 
+\\Now to find out normal vector we use the concept that dot product of orthogonal vectors gives 0.
+\\
+\\Normal vector of required plane has form b$\hat{j}$+c$\hat{k}$ as plane is parallel to X-axis. Call the vector $\vec{N_{p3}}$.
+\\Dot-product of $\vec{P_{p3}}$ and $\vec{N_{p3}}$ gives
+\\\hspace*{1.5cm}$\vec{P_{p3}}$ $\cdot$ $\vec{N_{p3}}$ =  3b + k = 0
+\\\hspace*{2.65cm} k = -3b
+\\Therefore the coefficients of plane equation (a,b,c)=(0,1,-3)
+\\
+\\\textbf{Step 2}: Finding the point $(x_{0},y_{0},z_{0})$ which lies on required plane to complete the plane equation.
+\\
+\\For finding a point lets substitute x=0 in plane equations of plane 1 and 2 and try to solve for y and z coordinates of point.
+\\\hspace*{1.5cm}X=$\begin{pmatrix}x\\y\\z\end{pmatrix}$=$\begin{pmatrix}0\\y_{0}\\z_{0}\end{pmatrix}$
+\\$\begin{pmatrix}1&1&1\end{pmatrix}$$\cdot$X = 1 $\implies$ $y_{0} + z_{0} = 1 $    $ \hspace*{1.26cm}$  --(1)
+\\$\begin{pmatrix}2&3&-1\end{pmatrix}$$\cdot$X = 1 $\implies$ $3y_{0} - z_{0} =-4 $ $ \hspace*{1cm}$ --(2)
+\\Solving equations (1) and (2) we get
+\\\hspace*{1.5cm} $y_{0}=-0.75 , z_{0}=1.75$
+\\Therefore point in plane
+\\\hspace*{1.2cm}$(x_{0},y_{0},z_{0})$ = (0,-0.75,1.75)
+\\Now coefficient d= $ a \cdot x_{0} + b \cdot y_{0} + c \cdot z_{0}$
+\\\hspace*{2.57cm} = -1*0.75 - 3*1.75 = -6
+\\The required plane equation is y -3z = -6
+\\It can also be represented as $\begin{pmatrix}0&1&-3\end{pmatrix}$$\cdot$X = -6
+\subsection*{Link for Python Code}
+\href{https://github.com/vikramealleti/EE5600/blob/
+\\master/Assignment%201/Linalgassignment.py}{code.py}
+
+	
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
