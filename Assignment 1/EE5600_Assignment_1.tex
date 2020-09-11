@@ -41,42 +41,65 @@
 \section*{Problem:}
 Find the equation of the plane passing through
 the line of intersection of the planes
-\\   
-\hspace*{2cm}  
-$\begin{pmatrix}{\bf1}&{\bf1}&{\bf1}\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = 1  and
-\\
-\hspace*{1.9cm}
-$\begin{pmatrix}{\bf2}&{\bf 3}&{\bf -1}\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = -4
-\\
+\begin{equation}
+\begin{pmatrix}{\bf1}&{\bf1}&{\bf1}\end{pmatrix}\cdot{\bf \vec{X}} ={\bf 1}, \nonumber
+\end{equation}
+\begin{equation}
+\begin{pmatrix}{\bf2}&{\bf 3}&{\bf -1}\end{pmatrix}\cdot{\bf \vec{X}} ={\bf -4} \nonumber
+\end{equation}
 and parallel to X-axis.
 
 \section*{Solution:}
-Equation of plane 1 : $\begin{pmatrix}{\bf1}&{\bf1}&{\bf1}\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = 1  
-\\Equation of plane 2 :
-$\begin{pmatrix}{\bf2}&{\bf 3}&{\bf -1}\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = -4
-\\Let the equation of plane 3 which passes through line made by intersection of planes 1 and 2 and being parallel to X-axis : $\begin{pmatrix}{\bf0}&{\bf p}&{\bf q}\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = c
 
+Equation of plane 1 :
+\begin{equation}\begin{pmatrix}{\bf1}&{\bf1}&{\bf1}\end{pmatrix}\cdot{\bf \vec{X}} = \bf1   \label{eqn1}
+\end{equation}
+Equation of plane 2 :
+\begin{equation}\begin{pmatrix}{\bf2}&{\bf 3}&{\bf -1}\end{pmatrix}\cdot {\bf \vec{X}} = \bf-4 \label{eqn2}
+\end{equation}
+
+Let the equation of plane 3 which passes through line made by intersection of planes 1 and 2 and being parallel to X-axis : 
+\begin{equation}
+\begin{pmatrix}{\bf0}&{\bf p}&{\bf q}\end{pmatrix}\cdot{\bf \vec{X}} = \bf c \label{eqn3}
+\end{equation}
 Now if three planes are passing through same line Then the Echelon matrix form obtained must be of form :
-
-$$\begin{pmatrix}[ccc|c]
+\begin{equation}
+\begin{pmatrix}[ccc|c]
  x & x & x & x\\  0 & x & x & x \\ 0 & 0 & 0 & 0
-\end{pmatrix}$$
+\end{pmatrix} \nonumber
+\end{equation}
 \\The augumented matrix from three planes :
-$$\begin{pmatrix}[ccc|c]
- 1 & 1 & 1 & 1\\  2 & 3 & \matminus1 & \matminus4 \\ 0 & p & q & c
-\end{pmatrix}$$
-\\ Performing row operations  $r_2 \rightarrow r_2-2\cdot r_1$ \&  $r_3 \rightarrow r_3-p\cdot r_2$, we end up with
-\\$$\begin{pmatrix}[ccc|c]
+\begin{equation}
+\begin{pmatrix}[ccc|c]
+ 1 & 1 & 1 & 1\\  2 & 3 & \matminus1 & \matminus4 \\ 0 & p & q & c \label{eqn4}
+\end{pmatrix} 
+\end{equation}
+\\ Performing the following row operations on
+\eqref{eqn4}
+\begin{align}
+r_2 \rightarrow r_2-2\cdot r_1  \label{eq5} \\
+r_3 \rightarrow r_3-p\cdot r_2 \label{eq6}
+\end{align}
+we end up with
+\begin{equation}
+\begin{pmatrix}[ccc|c]
  1 & 1 & 1 & 1\\  0 & 1 & \matminus3 & \matminus6 \\ 0 & 0 & q +3\cdot p & c +6\cdot p
-\end{pmatrix}$$
+\end{pmatrix} \label{eq7}
+\end{equation}
 \\To convert this matrix to Echelon form for three planes passing through same line the last row must be made zeroes.
-\\\hspace*{1cm} $\Longrightarrow q=\matminus3\cdot p $\hspace*{0.5cm}\&\hspace*{0.5cm} $c=\matminus6\cdot p$
-\\
-\\Therefore the required plane equation : \\\hspace*{2cm}$\begin{pmatrix}{\bf0}&{\bf p}&{\bf \matminus 3p }\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = $\matminus6p$
-\\Normalizing the above plane equation with p we get
-\\\hspace*{2.2cm}$\begin{pmatrix}{\bf0}&{\bf 1}&{\bf \matminus 3 }\end{pmatrix}$$\cdot$${\bf \vec{X}}$ = $\matminus6$
+\begin{align}
+\bf \Longrightarrow q=\matminus3p \hspace*{0.5cm}\&\hspace*{0.5cm} c=\matminus6p \label{eqn8}
+\end{align}
+Therefore the required plane equation :
+\begin{align}
+\begin{pmatrix}{\bf0}&{\bf p}&{\bf \matminus 3p }\end{pmatrix}\cdot{\bf \vec{X}} = \bf \matminus6p \label{eqn9}
+\end{align}
+Normalizing  with {\bf `p'} our plane equation becomes,
+\begin{align}
+\begin{pmatrix}{\bf0}&{\bf 1}&{\bf \matminus 3 }\end{pmatrix}\cdot{\bf \vec{X}} = \bf \matminus6 \label{eqn10}
+\end{align}
+\subsection*{Link For Python Code}
+\href{https://github.com/vikramealleti/EE5600/blob/master/Assignment%201/Linalgassignment.py}{code.py}
 \end{document}
-
-
 
 
